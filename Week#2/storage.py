@@ -8,7 +8,7 @@ try:
    with open(storage_path, 'r') as f_in:
         scr_dict = {}
         for item in f_in:
-            item_list = re.split('[, ]+', item.strip())
+            item_list = item.split()
             tmp_key = item_list[0]
             tmp_val = item_list[1:]
             scr_dict[tmp_key] = tmp_val
@@ -33,4 +33,4 @@ else:
                 scr_dict[key].append(val)
             with open(storage_path, 'w') as f_out:
                 for new_key in scr_dict:
-                    print(new_key, ','.join(scr_dict[new_key]), file=f_out)
+                    print(new_key, ' '.join(scr_dict[new_key]), file=f_out)
