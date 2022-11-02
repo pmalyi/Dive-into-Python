@@ -1,3 +1,4 @@
+# Key-value сховище (моє власне рішення)
 import os
 import tempfile
 import sys
